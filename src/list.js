@@ -43,6 +43,7 @@ function Home(props)
     const [state,setState]=useState(0);
     if (firebase.auth().currentUser==null)
     {
+        alert('Redireting to Sign in Page. Credentials required once again.');
         props.history.push('/');
         return (
             <div></div>
@@ -91,7 +92,7 @@ function Home(props)
           });
     }
     return (
-        <div className="App">
+            <div className="App">
             <div class="shadow-lg p-3 mb-5 rounded head">
                 <h3>Task List</h3>
                 <p align="right"><a href={"/"} style={{color:'blue'}}>Logout</a></p>
@@ -108,7 +109,7 @@ function Home(props)
             </div>
             <div>
                 <h3>Add a New Task</h3>        
-                <div className="form-group">
+                <div className="form-group container">
                     <input type="text" onChange={taskchange} className="form-control" placeholder="Enter Blog" />
                     <button type="submit" className="btn btn-primary" onClick={user}>Submit</button>
                 </div>

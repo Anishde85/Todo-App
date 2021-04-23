@@ -25,12 +25,11 @@ function Signin(props)
       props.history.push('/list');
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      alert("Enter correct email and password");
     });
   }
   return (
-            <div>
+            <div className="container">
                 <h3>Sign In</h3>
                 <div className="form-group">
                     <label>Email address</label>
@@ -40,7 +39,7 @@ function Signin(props)
                     <label>Password</label>
                     <input type="password" onChange={passwordchg} className="form-control" placeholder="Enter password" />
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={signup}>Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={signup}>Sign In</button>
                 <p><a href={"/signup"} style={{color:'blue'}}>Don't Have an account? Sign Up.</a></p>
             </div>
   );
