@@ -43,6 +43,7 @@ function Home(props)
     const [state,setState]=useState(0);
     if (firebase.auth().currentUser==null)
     {
+        alert('Redireting to Sign in Page. Credentials required once again.');
         props.history.push('/');
         return (
             <div></div>
