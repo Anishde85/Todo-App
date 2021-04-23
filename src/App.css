@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.cards
+{
+  border-style: solid;
+  border-color: green;
+  background-color: #61dafb;
+}
